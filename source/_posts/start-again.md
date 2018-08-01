@@ -1,6 +1,7 @@
 ---
 title: 推倒重来
 date: 2018-08-01 15:41:20
+description: 放弃原来的博客，推倒重来。
 categories:
 - 其他
 tags:
