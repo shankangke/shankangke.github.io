@@ -84,7 +84,3 @@ deploy:
   type: git
   repo: https://github.com/shankangke/shankangke.github.io.git
   branch: master
-
-# Passage End Tag
-passage_end_tag:
-  enable: true
