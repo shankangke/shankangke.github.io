@@ -84,3 +84,8 @@ deploy:
   type: git
   repo: https://github.com/shankangke/shankangke.github.io.git
   branch: master
+
+# Sitemap
+## https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path:sitemap.xml
