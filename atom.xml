@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>柯善康的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.shankangke.com/"/>
+  <updated>2018-08-09T03:18:52.670Z</updated>
+  <id>https://www.shankangke.com/</id>
+  
+  <author>
+    <name>Shankang Ke</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Hexo部署之后改变GitHub自定义域名Custom Domain的问题</title>
+    <link href="https://www.shankangke.com/hexo-changes-custom-domain.html"/>
+    <id>https://www.shankangke.com/hexo-changes-custom-domain.html</id>
+    <published>2018-08-01T20:56:35.000Z</published>
+    <updated>2018-08-09T03:18:52.670Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h2><p>把Hexo部署在GitHub，并且设置了自定义域名(Custom Domain)。</p><h2 id="问题概况"><a href="#问题概况" class="headerlink" title="问题概况"></a>问题概况</h2><p>每次Hexo部署完毕后，访问先前设置好的Custom Domain，都会提示404。<br>查看GitHub仓库(Repository)的设置(Settings)，发现自定义域名(Custom Domain)已经变成默认值（被清空）。</p><h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><p>查阅GitHub有关Custom Domain的文档得知：GitHub的自定义域名(Custom Domain)是通过master分支(branch)下的CNAME文件设置的。</p><h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><p>Hexo每次部署时，会先删除分支(branch)下的所有文件，再提交生成后的文件。在删除文件时，CNAME文件也被删除，造成自定义域名(Custom Domain)变成默认值（被清空）。</p><h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><ol><li>设置自定义域名(Custom Domain)，观察文件变动。</li><li>使Hexo部署时模仿文件变动。</li></ol><h2 id="操作记录"><a href="#操作记录" class="headerlink" title="操作记录"></a>操作记录</h2><ol><li>在GitHub仓库(Repository)的设置(Settings)页面，设置自定义域名(Custom Domain)为<a href="http://www.shankangke.com">www.shankangke.com</a></li><li>发现master分支(branch)下新建了一个CNAME文件</li><li>查看CNAME文件内容，CNAME文件内容为先前设置的自定义域名(Custom Domain):<a href="http://www.shankangke.com">www.shankangke.com</a></li><li>在Hexo的source目录下新建一个CNAME文件，内容为自定义域名(Custom Domain):<a href="http://www.shankangke.com">www.shankangke.com</a></li><li>重新使用Hexo部署，问题解决。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      分析并解决在GitHub部署Hexo后会自动改变自定义域名Custom Domain的问题。
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.shankangke.com/categories/tech/"/>
+    
+    
+      <category term="GitHub" scheme="https://www.shankangke.com/tags/GitHub/"/>
+    
+      <category term="Hexo" scheme="https://www.shankangke.com/tags/Hexo/"/>
+    
+      <category term="Custom Domain" scheme="https://www.shankangke.com/tags/Custom-Domain/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推倒重来</title>
+    <link href="https://www.shankangke.com/start-again.html"/>
+    <id>https://www.shankangke.com/start-again.html</id>
+    <published>2018-08-01T15:41:20.000Z</published>
+    <updated>2018-08-09T03:18:52.670Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="第三方博客平台的坑"><a href="#第三方博客平台的坑" class="headerlink" title="第三方博客平台的坑"></a>第三方博客平台的坑</h3><p>最开始写博客是在第三方平台，和讯、新浪、搜狐都用过。起步阶段使用这些平台确实很方便。<br>第三方平台的优点：</p><ul><li>免费</li><li>没有技术门槛</li><li>注册账号直接开写</li><li>一键切换样式</li><li>权重高、收录快</li><li>无干扰</li></ul><p>可是时间一久，就发现在第三方平台创作十分不自由。既要防着各种奇葩敏感词，又要忍受广告，还不能完全自定义样式。<br>于是，我开始尝试自建网站。当时的我根本就没想到，这是从一个坑跳到了另一个坑……</p><h3 id="WordPress的大坑"><a href="#WordPress的大坑" class="headerlink" title="WordPress的大坑"></a>WordPress的大坑</h3><h4 id="兴奋地入坑"><a href="#兴奋地入坑" class="headerlink" title="兴奋地入坑"></a>兴奋地入坑</h4><p>我在2010年恶补了关于网站建设的知识。当时听说PHP比ASP更快、更安全，于是就选用了WordPress。<br>自建网站无比自由，完全自定义。各种功能都可以通过WordPress的插件轻松实现，WordPress也有很多好看的主题随意选择。</p><h4 id="无尽的折腾"><a href="#无尽的折腾" class="headerlink" title="无尽的折腾"></a>无尽的折腾</h4><p>可选择一多，就开始各种纠结；功能一强大，就开始各种折腾。<br>自建网站之后大部分时间都花在了选择、更改、调试、安全加固等等方面，真正用来创作的时间少之又少。<br>累了，但停不下折腾的步伐。</p><h4 id="令人眼前一亮的发现"><a href="#令人眼前一亮的发现" class="headerlink" title="令人眼前一亮的发现"></a>令人眼前一亮的发现</h4><p>最近，真的是厌烦了各种各样的折腾。就在折腾的过程中，查资料找到了几个博客，发现它们简洁、清爽、无打扰。<br>我原以为它们用的是清爽的WordPress主题，但查看源代码却找不到丝毫WordPress的痕迹。<br>我又试探性地在域名后面加上<code>/wp-admin/</code>，发现也无法打开其后台。<br>它们不是基于WordPress的网站！<br>我在其中一个博客中发现了一篇描述网站由来的文章。这网站是生成纯静态HTML页面后，托管在GitHub上的。<br>真是个惊奇地发现。我决定放弃之前的WordPress博客，推倒重来。</p><h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><h3 id="选择新坑"><a href="#选择新坑" class="headerlink" title="选择新坑"></a>选择新坑</h3><p>在我前面发现的博客中，有的是使用Jekyll生成的，有的是使用Hexo生成的。<br>又是选择……<br>我已经厌倦这种并无多大意义的纠结了。</p><h3 id="入坑Hexo-GitHub"><a href="#入坑Hexo-GitHub" class="headerlink" title="入坑Hexo+GitHub"></a>入坑Hexo+GitHub</h3><p>经过简单对比，我选择了Hexo+GitHub的组合。我内心十分清楚，又是新坑……</p><h4 id="直面Git和GitHub"><a href="#直面Git和GitHub" class="headerlink" title="直面Git和GitHub"></a>直面Git和GitHub</h4><p>作为一个“伪猿”，我很早就接触到了GitHub，但是因为对Git十分陌生，也就一直在逃避。<br>这次实在是不想折腾服务器了，就直面GitHub。<br>边看文档边捣鼓，花了2小时熟悉了Git和GitHub。<br>其实，比我想象的简单。</p><h4 id="折腾Hexo"><a href="#折腾Hexo" class="headerlink" title="折腾Hexo"></a>折腾Hexo</h4><p>这部分花的时间比较长。<br>首先是装配Node.js，在我并不熟悉地Windows 10上用命令行折腾了半天，最后还是妥协选择了msi安装。<br>接着安装Hexo和依赖、下载主题。由于忘记给Node.js的npm换源，以几KB每秒的速度，花了几小时搞完这项工作。<br>然后配置Hexo、生成、部署，又出问题。<br>网上都提到Hexo配置文件的repo要写仓库的SSH，我这样配置之后，部署时提示我应该先配置，过一会儿又说部署完成，可实际检查发现并没有部署。<br>明明已经配置了，怎么还提示需要先配置？明明已经提示部署完成，怎么实际并没有部署？<br>又查了半天，改了半天，依然无果。<br>最后我索性直接把HTTPS的URL地址填到repo，再一试，问题解决。这着实令我有些摸不着头脑。</p><h3 id="安逸"><a href="#安逸" class="headerlink" title="安逸"></a>安逸</h3><p>接下来应该不会再折腾了，也没什么需要折腾的了，而且我上高中了也就没时间折腾了。</p>]]></content>
+    
+    <summary type="html">
+    
+      放弃原来的博客，推倒重来。
+    
+    </summary>
+    
+      <category term="其他" scheme="https://www.shankangke.com/categories/others/"/>
+    
+    
+      <category term="博客" scheme="https://www.shankangke.com/tags/blog/"/>
+    
+  </entry>
+  
+</feed>
