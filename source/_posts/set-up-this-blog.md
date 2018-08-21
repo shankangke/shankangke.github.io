@@ -211,10 +211,76 @@ deploy:
 
 就是说一旦你的电脑故障，或者是你更换电脑了，就无法再对你原来的博客进行任何更改。
 
-再新建一个仓库来存放源文件又有些麻烦了，于是，我使用了分支。
+再新建一个仓库来存放源文件又有些麻烦了。所以，我使用了分支。
 
-### 使用新分支
+### 部署
 
 刚刚我们部署时，已经自动生成了`master`分支，我们只需要再新建一个分支用了存放源文件即可。
 
-使用命令创建一个`hexo`分支(名字随便起)，并切换到该分支：`git checkout -b hexo`
+首先，在之前`<folder>`目录(即你的网站目录)的上一级目录中把刚刚的 Git 仓库克隆过来，执行`git clone <repo>`(把`<repo>`替换成你之前在配置文件中填写的 Git 仓库地址，比如我的 Git 仓库地址是`https://github.com/shankangke/shankangke.github.io.git`，那我就执行`git clone https://github.com/shankangke/shankangke.github.io.git`)。
+
+克隆完毕后我们进入这个仓库目录，执行`cd <repo_name>`(把`<repo_name>`替换成你的仓库名称，比如我的仓库名称是`shankangke.github.io`，我就执行`cd shankangke.github.io`)。
+
+接着，我们使用命令创建一个`hexo`分支(名字随便起，我这篇文章先按照这个分支名来写)，并切换到该分支：`git checkout -b hexo`
+
+然后，把之前`<folder>`目录(即你的网站目录)下的文件全部复制过来，执行命令`cp -r ../<folder>/. ./`。
+
+完成后，我们就打包并提交这个分支。依次(一行一行地)执行下列命令：
+
+```
+git add .
+git commit -m "Set Hexo Up"
+git push origin hexo
+```
+
+此时，你的 Hexo 网站源文件也已经提交到了 GitHub 的远程仓库，不再受单台电脑束缚，也不用担心文件意外丢失(只要你自己不去 GitHub 的远程仓库删除)。以后对网站进行改动，直接在此进行即可，`<folder>`目录(即你之前的网站目录)已经可以删除。
+
+### 日常管理
+
+当你在本地对网站进行了改动(比如新建或修改文章、更改主题模板等等)，按照下列步骤来保证你的更改能始终同步到 GitHub 的远程仓库，并能将网站正确发布。
+
+改动完成后，在`hexo`分支，依次(一行一行地)执行下列命令：
+
+```
+git add .
+git commit -m "Update Hexo"
+git push origin hexo
+```
+
+此时，你的改动已经提交到 GitHub 的远程仓库。接下来，在当前目录执行`hexo g -d`即可生成并部署网站。
+
+### 恢复
+
+如果你的本地源文件不幸丢失，或者你换了一台新电脑，先确保已经达到了前文的基本配置(比如安装必要的环境软件等)，再按照下列步骤来找回你的源文件并恢复 Hexo 的正常功能。
+
+首先，克隆仓库并切换到`hexo`分支，依次(一行一行地)执行下列命令：
+
+```
+git clone <repo>
+cd <repo_name>
+git checkout hexo
+```
+
+记得把`<repo>`替换成你的 Git 仓库地址，把`<repo_name>`替换成你的 Git 仓库名称。
+
+这时，你已经把源文件找回，下面我们来恢复 Hexo 的正常功能。
+
+依次(一步一步地)执行下列命令：
+
+```
+npm install -g hexo-cli
+npm install
+npm install hexo-deployer-git
+```
+
+至此，你的 Hexo 应该已经能够恢复使用了。尽情享受吧！
+
+## 尾声
+
+至此，正文内容已经结束，希望能够对你有所帮助！
+
+这是我写过的最长的文章了，真的好累，终于体会到了那些大V们的不易。
+
+如果你发现了这篇文章中存在任何错误，或者你有任何疑问、建议，都请与我取得联系。
+
+我的邮箱地址是`shankangke@gmail.com`，期望收到你的来信，哪怕只是几句话。
