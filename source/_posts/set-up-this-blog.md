@@ -26,7 +26,7 @@ GitHub 的公开库是免费的， GitHub Pages 也免费提供二级域名，�
 - Hexo
 - Markdown
 
-#### Git
+### Git
 
 关于 Git ，这里有一些资源：
 
@@ -36,15 +36,15 @@ GitHub 的公开库是免费的， GitHub Pages 也免费提供二级域名，�
 
 采用 GitHub 部署博客，只需简单了解Git即可。
 
-#### GitHub
+### GitHub
 
 [GitHub](https://github.com/) 是一个网站、远程仓库，用于托管 Git 仓库，今年6月被微软收购，截至本文发布时公开库仍然免费。我们部署博客不需要对 GitHub 了解太多。
 
-#### GitHub Pages
+### GitHub Pages
 
 GitHub 上的库可以免费托管在 GitHub Pages 上，我们只需了解怎么操作即可。
 
-#### Hexo
+### Hexo
 
 Hexo 是一个使用 Node.js 编写的博客框架，简单、快速、高效、可扩展性强。
 
@@ -52,7 +52,7 @@ Hexo 是一个使用 Node.js 编写的博客框架，简单、快速、高效、
 
 [Hexo 中文网站](https://hexo.io/zh-cn/)
 
-#### Markdown
+### Markdown
 
 Markdown 是一种轻量级标记语言， Hexo 支持 Markdown 语法。关于 Markdown 的详细资料可以自行查询，我们这里只需要掌握如何使用 Markdown 即可。
 
@@ -217,9 +217,9 @@ deploy:
 
 刚刚我们部署时，已经自动生成了`master`分支，我们只需要再新建一个分支用了存放源文件即可。
 
-首先，在之前`<folder>`目录(即你的网站目录)的上一级目录中把刚刚的 Git 仓库克隆过来，执行`git clone <repo>`(把`<repo>`替换成你之前在配置文件中填写的 Git 仓库地址，比如我的 Git 仓库地址是`https://github.com/shankangke/shankangke.github.io.git`，那我就执行`git clone https://github.com/shankangke/shankangke.github.io.git`)。
+首先，在之前`<folder>`目录(即你的网站目录)的上一级目录中把刚刚的 Git 仓库克隆过来，执行`git clone <repo>`(把`<repo>`替换成你之前在配置文件中填写的 Git 仓库地址)。
 
-克隆完毕后我们进入这个仓库目录，执行`cd <repo_name>`(把`<repo_name>`替换成你的仓库名称，比如我的仓库名称是`shankangke.github.io`，我就执行`cd shankangke.github.io`)。
+克隆完毕后我们进入这个仓库目录，执行`cd <repo_name>`(把`<repo_name>`替换成你的仓库名称)。
 
 接着，我们使用命令创建一个`hexo`分支(名字随便起，我这篇文章先按照这个分支名来写)，并切换到该分支：`git checkout -b hexo`
 
