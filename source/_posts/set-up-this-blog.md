@@ -1,7 +1,7 @@
 ---
-title: 建立这个博客
+title: 使用 Hexo + GitHub 建立这个博客网站 免费博客网站建立教程
 date: 2018-08-09 09:38:58
-description: 简单记录
+description: 本文详细记录了通过 Hexo + GitHub 建立这个博客的经过，文中每项操作，我都请自执行过，可以保证正确性。由于内容浅显易懂详细准确，已经可以视为教程，按照本文一步一步地操作，你也可以零成本轻松建立一个博客网站。
 categories:
 - tech
 tags:
