@@ -3,16 +3,16 @@ title: 使用 Hexo + GitHub 建立这个博客网站 免费博客网站建立教
 date: 2018-08-09 09:38:58
 description: 本文详细记录了通过 Hexo + GitHub 建立这个博客的经过，文中每项操作，我都请自执行过，可以保证正确性。由于内容浅显易懂详细准确，已经可以视为教程，按照本文一步一步地操作，你也可以零成本轻松建立一个博客网站。
 categories:
-- tech
+- 技术
 tags:
-- blog
+- 博客
 - GitHub
 - Hexo
 ---
 
 ## 前言
 
-我的这个[“柯善康的博客”](https://www.shankangke.com/)是部署在 GitHub 上，托管在 GitHub Pages 上，通过 Hexo 程序生成静态文件。日常管理采用 Git 版本控制，也不必担心写废。
+我的这个"[柯善康的博客](https://www.shankangke.com/)"是部署在 GitHub 上，托管在 GitHub Pages 上，通过 Hexo 程序生成静态文件。日常管理采用 Git 版本控制，也不必担心写废。
 
 GitHub 的公开库是免费的， GitHub Pages 也免费提供二级域名，并且支持 SSL 部署。如果你不使用自己的独立域名，完全可以做到0成本运行一个博客。
 
