@@ -12,7 +12,7 @@ tags:
 
 ## 前言
 
-我的这个"[柯善康的博客](https://www.shankangke.com/)"是部署在 GitHub 上，托管在 GitHub Pages 上，通过 Hexo 程序生成静态文件。日常管理采用 Git 版本控制，也不必担心写废。
+我的这个[柯善康的博客](https://www.shankangke.com/)是部署在 GitHub 上，托管在 GitHub Pages 上，通过 Hexo 程序生成静态文件。日常管理采用 Git 版本控制，也不必担心写废。
 
 GitHub 的公开库是免费的， GitHub Pages 也免费提供二级域名，并且支持 SSL 部署。如果你不使用自己的独立域名，完全可以做到0成本运行一个博客。
 
